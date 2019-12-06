@@ -77,3 +77,81 @@ def t_VARIABLE(t):
     r'([\$]+[A-Za-z]+)'
     return t
 
+def t_SINO(t):
+    r'else'
+    return t
+def t_INT(t):
+    r'int'
+    return t
+
+def t_SI(t):
+    r'if'
+    return t
+
+
+def t_RETURN(t):
+    r'return'
+    return t
+
+
+def t_VOID(t):
+    r'void'
+    return t
+
+def t_BOOLEANO(t):
+    r'bool'
+    return t
+
+def t_FLOTANTE(t):
+    r'float'
+    return t
+
+def t_DOUBLE(t):
+    r'double'
+    return t
+
+def t_MIENTRAS(t):
+    r'while'
+    return t
+
+
+def t_PARA(t):
+    r'for+'
+    return t
+
+
+def t_ENTERO(t):
+    r'\d+'
+    t.value = int(t.value)
+    return t
+
+
+def t_IDENTIFICADOR(t):
+    r'\w+(_\d\w)*[^if]'
+    return t
+
+
+def t_CADENA(t):
+    r'\"?(\w+ \ *\w*\d* \ *)\"?'
+    return t
+
+
+def t_NUMERAL(t):
+    r'\#'
+    return t
+
+
+def t_PLUSPLUS(t):
+    r'\+\+'
+    return t
+
+
+def t_MENORIGUAL(t):
+    r'<='
+    return t
+
+
+def t_MAYORIGUAL(t):
+    r'>=+?'
+    return t
+
